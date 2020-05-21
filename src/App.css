@@ -1,38 +1,109 @@
 .App {
   text-align: center;
+  color: white;
+  background-color: red;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  margin: 0 auto;
+  /* max-width: 64em; */
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* li {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f3f6f7;
+  font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+} */
+
+.newspaperTitle {
+  color: white;
+  background-color: red;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  font: Helvetica;
+  padding-right: 5px;
+
+}
+
+/* .headlineTitle {
+
+} */
+
+.container {
+  display: grid;
+  background-color: #f3f6f7;
+}
+
+.content, .overlay {
+  grid-area: 1 / 1;
+}
+
+.content {
+  padding-left: 5px;
+}
+
+.overlay {
+  margin-top: 25px;
+  padding-left: 5px;
+}
+
+.headlines {
+  color: black;
+  margin: 0px, 20px, 0px, 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.loading {
+  color: black;
+  text-align: center;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 5vh; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  text-align: left;
+  padding-left: 20px;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  font: Helvetica;
+  font-weight: 900;
+  /* font-size: 40px; */
   color: white;
+  background-color:#ec1701;
+}
+
+#headline-sm {
+  font-size: calc(5px + 2vmin);
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* @media 
+
+below certain size, change columns to 3, then 1 for mobile
+ul {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1em;
+  margin: 0 auto;
+  max-width: 64em;
+  padding: 0;
+} */

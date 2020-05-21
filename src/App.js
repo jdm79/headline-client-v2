@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Container, Row, Col } from 'react-grid-system';
+import HeadlinesList from './HeadlinesList'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <div className="App">
+        <header className="App-header">
+          <h1>Headline Checker <span id="headline-sm"> (just what are the other newspapers up to?) </span></h1>
+        </header>
+      </div> 
+      <div className="headlines">
+        <HeadlinesList />
+      </div>
+    </div>    
   );
 }
 
