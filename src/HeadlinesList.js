@@ -24,9 +24,6 @@ class HeadlinesList extends React.Component {
 
     clearInterval(this.intervalID);
   }
-
-  // url: "https://flask-headlines-api.herokuapp.com/headlines"
-  // dev_url: "http://127.0.0.1:5000/headlines"
   
   getData = () => {
     fetch("https://flask-headlines-api.herokuapp.com/headlines")
@@ -55,7 +52,6 @@ class HeadlinesList extends React.Component {
       return <div className="loading">Loading...</div>;
     } else {
       return (
-        // <h4>(Updated at: {item.updated}</h4>
         <ul>
           {items.map(item => (
             <div className="container" key={item.paper}>
