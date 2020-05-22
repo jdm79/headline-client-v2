@@ -184,11 +184,61 @@ ul {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .App-header {
-    /* display: flex;
-    flex-direction: column; */
-    /* text-align: left; */
+@media screen and (max-width: 414px) {
+  .content {
+    margin-top: -10px;
     padding-left: 0px;
+  }
+
+  .App-header {
+    text-align: center;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .content {
+    margin-top: -10px;
+    padding-left: 0px;
+  }
+
+  .App-header {
+    text-align: center;
+    padding-right: 65px;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .content {
+    margin-top: -10px;
+    padding-left: 0px;
+  }
+
+  .App-header {
+    text-align: center;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content {
+    margin-top: -10px;
+    padding-left: 0px;
+  }
+
+  .App-header {
+    text-align: center;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .content {
+    margin-top: -10px;
+    padding-left: 0px;
+  }
+
+  .App-header {
+    text-align: center;
   }
 }
