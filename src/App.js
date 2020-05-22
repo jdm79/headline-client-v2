@@ -8,7 +8,7 @@ function App() {
     <div>
       <div className="App">
         <header className="App-header">
-          <h1>Headline Checker <span id="headline-sm"> (just what are the other newspapers up to?) </span></h1>
+          <h1>UK Headline Checker</h1>
         </header>
       </div> 
       <div className="headlines">
