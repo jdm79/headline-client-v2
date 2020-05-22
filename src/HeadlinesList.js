@@ -49,7 +49,7 @@ class HeadlinesList extends React.Component {
     if (error) {
       return <div>Error: {error.message}</div>
     } else if (!isLoaded) {
-      return <div className="loading">Loading...</div>;
+      return <div className="loading">This app takes about 10 seconds to load on initial fire-up. After that, it automatically refreshes. No need to do anything. Hang tight! It's loading...</div>;
     } else {
       return (
         <ul>
