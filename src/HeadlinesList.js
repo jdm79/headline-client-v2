@@ -48,7 +48,7 @@ class HeadlinesList extends React.Component {
     const { error, isLoaded, items } = this.state
     if (error) {
       return <div>Error: {error.message}. Don't worry, I've just fallen asleep. Refresh the browser (⌘R) to bring me back. 
-        I am hosted on a free dyno, so will go to sleep after a while.</div>
+        I am hosted on a free dyno, so I will go to sleep after a while.</div>
     } else if (!isLoaded) {
       return <div className="loading">This app takes about 10 seconds to load on initial fire-up. After that, it automatically refreshes. No need to do anything. Hang tight! It's loading...</div>;
     } else {
