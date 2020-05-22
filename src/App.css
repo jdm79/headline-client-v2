@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   color: white;
-  background-color: red;
+  background-color:#ec1701;
 }
 
 ul {
@@ -15,7 +15,7 @@ ul {
 
 .newspaperTitle {
   color: white;
-  background-color: red;
+  background-color: #ec1701;
   font-style: italic;
   font-family: Arial, Helvetica, sans-serif;
   font: Helvetica;
