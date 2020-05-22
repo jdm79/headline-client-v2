@@ -56,13 +56,21 @@ ul {
   text-align: center;
 }
 
+.loadingMessage {
+  background-color: #ec1701;
+  color: white;
+  font-size: calc(8px + 2vmin);
+  font-family: Arial, Helvetica, sans-serif;
+  font: Helvetica;
+}
+
 .App-header {
   background-color: #282c34;
   /* min-height: 5vh; */
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  text-align: left;
+  text-align: center;
   padding-left: 20px;
   justify-content: center;
   font-size: calc(15px + 2vmin);
@@ -89,7 +97,7 @@ ul {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    text-align: left;
+    text-align: center;
     padding-left: 40px;
     justify-content: center;
     font-size: calc(10px + 2vmin);
@@ -150,6 +158,16 @@ ul {
   .content {
     margin-top: -10px;
     padding-left: 5px;
+  }
+
+  .loading {
+    margin-top: 5px;
+    color: black;
+    text-align: center;
+  }
+
+  .spinner {
+    align-content: center;
   }
 
   .App-header {

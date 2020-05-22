@@ -8,7 +8,7 @@ function App() {
     <div>
       <div className="App">
         <header className="App-header">
-          <h1>UK Headline Checker (Beta version)</h1>
+          <h1>UK Headline Checker</h1>
         </header>
       </div> 
       <div className="headlines">
