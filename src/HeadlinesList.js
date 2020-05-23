@@ -1,5 +1,6 @@
 import React from 'react'
 import Loader from 'react-loader-spinner'
+
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 
@@ -50,7 +51,7 @@ class HeadlinesList extends React.Component {
   render() {
     const { error, isLoaded, items } = this.state
     if (error) {
-      return <div>Error: {error.message}. Don't worry, I've just fallen asleep. Refresh the browser (⌘R) to bring me back. 
+      return <div className="errorMessage">I've fallen asleep. Refresh the browser (⌘R) to bring me back. 
         I am hosted on a free dyno, so I will go to sleep after a while.</div>
     } else if (!isLoaded) {
       return(

@@ -4,6 +4,86 @@
   background-color:#ec1701;
 }
 
+.button {
+  /* max-width: 70px; */
+  text-align: center;
+  margin: 0 auto;
+  /* margin-top:-30px; */
+  font-size: calc(8px + 2vmin);
+  font-family: Arial, Helvetica, sans-serif;
+  font: Helvetica;
+  font-style: italic;
+  font-weight: 900;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 5px 75px 0px 75px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.closeButton {
+  max-width: 70px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: calc(8px + 2vmin);
+  font-family: Arial, Helvetica, sans-serif;
+  font: Helvetica;
+  font-style: italic;
+  font-weight: 900;
+  background-color: #ec1701;
+  border: none;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  color: black;
+  font-size: calc(8px + 2vmin);
+  font-family: Arial, Helvetica, sans-serif;
+  font: Helvetica;
+}
+.modal > .aboutHeader {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 0px;
+  background-color: #ec1701;
+  color: white;
+}
+.modal > .aboutContent {
+  width: 100%;
+  padding-top: 10px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -64,14 +144,25 @@ ul {
   font: Helvetica;
 }
 
+.errorMessage {
+  background-color: #ec1701;
+  color: white;
+  font-size: calc(8px + 2vmin);
+  font-family: Arial, Helvetica, sans-serif;
+  font: Helvetica;
+  font-weight: 900;
+  padding: 5px;
+  margin-top: 5px;
+}
+
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   /* min-height: 5vh; */
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   text-align: center;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   justify-content: center;
   font-size: calc(15px + 2vmin);
   font-style: italic;
@@ -131,6 +222,7 @@ ul {
 }
 
 @media screen and (max-width: 768px) {
+
   body {
     background-color: white;
   }
@@ -151,6 +243,7 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
+
   body {
     background-color:white;
   }
@@ -185,6 +278,7 @@ ul {
 }
 
 @media screen and (max-width: 414px) {
+  
   .content {
     margin-top: -10px;
     padding-left: 0px;
@@ -197,6 +291,7 @@ ul {
 }
 
 @media screen and (max-width: 411px) {
+  
   .content {
     margin-top: -10px;
     padding-left: 0px;
@@ -209,6 +304,7 @@ ul {
 }
 
 @media screen and (max-width: 384px) {
+  
   .content {
     margin-top: -10px;
     padding-left: 0px;
@@ -221,6 +317,7 @@ ul {
 }
 
 @media screen and (max-width: 375px) {
+  
   .content {
     margin-top: -10px;
     padding-left: 0px;
@@ -233,6 +330,7 @@ ul {
 }
 
 @media screen and (max-width: 360px) {
+  
   .content {
     margin-top: -10px;
     padding-left: 0px;
