@@ -41,8 +41,10 @@ class HeadlinesList extends React.Component {
       (error) => {
         this.setState({
           isLoaded: true,
-          error
-        })
+          error,
+        },
+        this.getData()
+        )
       }
     ) 
   }
@@ -64,7 +66,7 @@ class HeadlinesList extends React.Component {
             color="#ec1701"
             height={200}
             width={200}
-            timeout={15000} //15 secs
+            timeout={20000} //15 secs
           /> 
         </div>
       )      
