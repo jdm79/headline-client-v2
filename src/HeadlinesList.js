@@ -42,9 +42,7 @@ class HeadlinesList extends React.Component {
         this.setState({
           isLoaded: true,
           error,
-        },
-        this.getData()
-        )
+        })
       }
     ) 
   }
