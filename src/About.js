@@ -2,7 +2,7 @@ import React from "react"
 import Popup from "reactjs-popup"
 
 export default About => (
-  <Popup trigger={<button className="button"> More info here </button>} modal>
+  <Popup trigger={<button className="button"> Click on me to find out more about this app </button>} modal>
     {close => (
       <div className="modal">
        

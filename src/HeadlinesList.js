@@ -1,6 +1,6 @@
 import React from 'react'
+import About from './About'
 import Loader from 'react-loader-spinner'
-
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 
@@ -13,7 +13,8 @@ class HeadlinesList extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      items: []
+      items: [],
+      copyright: "© James Malvern 2020"
     };
   }
 
@@ -21,7 +22,7 @@ class HeadlinesList extends React.Component {
 
     this.getData()
 
-    this.intervalID = setInterval(this.getData.bind(this), 300000);
+    this.intervalID = setInterval(this.getData.bind(this), 300000)
   }
 
   componentWillUnmount() {
@@ -51,26 +52,30 @@ class HeadlinesList extends React.Component {
   render() {
     const { error, isLoaded, items } = this.state
     if (error) {
-      return <div className="errorMessage">I've fallen asleep. Refresh the browser (⌘R) to bring me back. 
-        I am hosted on a free dyno, so I will go to sleep after a while.</div>
+      return <div className="errorMessage"> 
+          I am hosted on a free dyno, so I will go to sleep after a while.
+          Refresh the browser (⌘R) to bring me back.
+        </div>
     } else if (!isLoaded) {
       return(
         <div className="loading">
           <div className="loadingMessage">
-          This app takes about 10 seconds to load on initial fire-up. 
-          After that, it automatically refreshes. No need to do anything.
+          This app is hosted on a free plan, so the server will go to sleep from time to time. 
+          It takes about 10 seconds to load on initial fire-up. 
+          After that, the headlines automatically refresh. No need to do anything.
           </div>
           <Loader className="spinner"
             type="Bars"
             color="#ec1701"
             height={200}
             width={200}
-            timeout={20000} //15 secs
+            timeout={20000}
           /> 
         </div>
       )      
     } else {
       return (
+        <div>
         <ul>
           {items.map(item => (
             <div className="container" key={item.paper}>
@@ -83,6 +88,10 @@ class HeadlinesList extends React.Component {
             </div>  
           ))}
         </ul>
+        <div className="footer">
+        <p class="copyright">{this.state.copyright}<span><About /></span></p>
+      </div>
+      </div>
       )
     }
   }
