@@ -14,13 +14,15 @@ class HeadlinesList extends React.Component {
       error: null,
       isLoaded: false,
       items: [],
-      copyright: "© James Malvern 2020"
+      copyright: "© James Malvern 2020",
+      date: null
     };
   }
 
   componentDidMount() {
 
     this.getData()
+    this.getDate()
 
     this.intervalID = setInterval(this.getData.bind(this), 300000)
   }
@@ -29,8 +31,17 @@ class HeadlinesList extends React.Component {
 
     clearInterval(this.intervalID);
   }
+
+  getDate() {
+    // let date = { currentTime: new Date().toLocaleTimeString() }
+    this.setState({
+      date: new Date().toLocaleTimeString() 
+    })
+  }
   
   getData = () => {
+    this.getDate()
+
     fetch("https://flask-headlines-api.herokuapp.com/headlines")
     .then(res => res.json())
     .then(
@@ -74,6 +85,7 @@ class HeadlinesList extends React.Component {
     } else {
       return (
         <div>
+          <h6 className="updated">Updated at: {this.state.date}</h6>
         <ul>
           {items.map(item => (
             <div className="container" key={item.paper}>

@@ -201,6 +201,11 @@ ul {
   Media queries below, to handle different-sized screens
 */
 
+.updated {
+  text-align: center;
+}
+
+
 @media screen and (max-width: 1024px) {
 
   .App-header {

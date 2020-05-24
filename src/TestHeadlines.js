@@ -1,6 +1,8 @@
 import React from 'react'
 import About from './About'
 import Loader from 'react-loader-spinner'
+// import Timecode from 'react-timecode';
+
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
@@ -32,7 +34,8 @@ class TestHeadlinesList extends React.Component {
       error: null,
       isLoaded: false,
       items: [],
-      copyright: "© James Malvern 2020"
+      copyright: "© James Malvern 2020",
+      date: new Date().toLocaleTimeString()
     };
   }
 
@@ -40,13 +43,19 @@ class TestHeadlinesList extends React.Component {
 
     this.setState({
       isLoaded: true,
-      items: data
+      items: data,
     })
+
+    this.getDate()
   }
 
   componentWillUnmount() {
 
     clearInterval(this.intervalID);
+  }
+
+  getDate() {
+    var date = { currentTime: new Date().toLocaleTimeString() };
   }
         
   render() {
@@ -73,7 +82,10 @@ class TestHeadlinesList extends React.Component {
       )      
     } else {
       return (
+      
+
         <div>
+          <h6 className="updated">Updated at: {this.state.date}</h6>
         <ul>
           {items.map(item => (
             <div className="container" key={item.paper}>
