@@ -98,7 +98,7 @@ class HeadlinesList extends React.Component {
           ))}
         </ul>
         <div className="footer">
-          <p className="copyright">{this.state.copyright}<span><About /></span></p>
+          <p className="copyright"><a href="https://jamesmalvern.com" target="_blank">{this.state.copyright}</a><span><About /></span></p>
         </div>
       </div>
       )
