@@ -271,6 +271,15 @@ ul {
     padding-left: 5px;
   }
 
+  .modal {
+    color: black;
+    font-size: calc(6px + 2vmin);
+    font-family: Arial, Helvetica, sans-serif;
+    font: Helvetica;
+    line-height: 1.2;
+
+  }
+
   .loading {
     margin-top: 5px;
     color: black;
@@ -344,6 +353,21 @@ ul {
   .App-header {
     text-align: center;
     padding-right: 40px;
+  }
+
+  .modal {
+    color: black;
+    font-size: calc(6px + 2vmin);
+    font-family: Arial, Helvetica, sans-serif;
+    font: Helvetica;
+    line-height: 1.2;
+
+  }
+
+  .modal > .aboutContent {
+    width: 100%;
+    padding-top: 10px;
+    /* font-size: 12px; */
   }
 }
 
