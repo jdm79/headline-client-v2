@@ -3,10 +3,11 @@ import About from './About'
 import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
+const url = "https://flask-headlines-api.herokuapp.com/headlines"
+const urlDev = "http://127.0.0.1:5000/headlines"
 
 class HeadlinesList extends React.Component {
   intervalID
-
 
   constructor(props) {
     super(props);
@@ -20,20 +21,16 @@ class HeadlinesList extends React.Component {
   }
 
   componentDidMount() {
-
     this.getData()
     this.getDate()
-
     this.intervalID = setInterval(this.getData.bind(this), 300000)
   }
 
   componentWillUnmount() {
-
     clearInterval(this.intervalID);
   }
 
   getDate() {
-    // let date = { currentTime: new Date().toLocaleTimeString() }
     this.setState({
       date: new Date().toLocaleTimeString() 
     })
@@ -41,8 +38,7 @@ class HeadlinesList extends React.Component {
   
   getData = () => {
     this.getDate()
-
-    fetch("https://flask-headlines-api.herokuapp.com/headlines")
+    fetch(urlDev)
     .then(res => res.json())
     .then(
       (data) => {
@@ -58,14 +54,14 @@ class HeadlinesList extends React.Component {
         })
       }
     ) 
-  }
-        
+  } 
+
   render() {
     const { error, isLoaded, items } = this.state
     if (error) {
       return <div className="errorMessage"> 
           I am hosted on a free dyno, so I will go to sleep after a while.
-          Refresh the browser (⌘R) to bring me back.
+          Refresh the browser to bring me back.
         </div>
     } else if (!isLoaded) {
       return(
@@ -88,19 +84,22 @@ class HeadlinesList extends React.Component {
           <h6 className="updated">Updated at: {this.state.date}</h6>
         <ul>
           {items.map(item => (
-            <div className="container" key={item.paper}>
-              <div className="content" >
-                <h3><span className="newspaperTitle">{item.paper}</span> </h3>
-              </div>
-              <div className="overlay">
-                <h3><span className="headlineTitle">{item.headline}</span></h3>
-              </div>
-            </div>  
+            <a href={item.link} target="_blank">
+              <div className="container" key={item.paper}>
+                <div className="content" >
+                  <h3><span className="newspaperTitle">{item.paper}</span> </h3>
+                </div>
+                <div className="overlay">
+                  <h3><span className="headlineTitle">{item.headline}</span></h3>
+                </div>
+              </div> 
+            </a>
+            
           ))}
         </ul>
         <div className="footer">
-        <p class="copyright">{this.state.copyright}<span><About /></span></p>
-      </div>
+          <p className="copyright">{this.state.copyright}<span><About /></span></p>
+        </div>
       </div>
       )
     }

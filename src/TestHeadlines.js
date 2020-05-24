@@ -45,12 +45,10 @@ class TestHeadlinesList extends React.Component {
       isLoaded: true,
       items: data,
     })
-
     this.getDate()
   }
 
   componentWillUnmount() {
-
     clearInterval(this.intervalID);
   }
 
@@ -82,8 +80,6 @@ class TestHeadlinesList extends React.Component {
       )      
     } else {
       return (
-      
-
         <div>
           <h6 className="updated">Updated at: {this.state.date}</h6>
         <ul>
@@ -93,18 +89,17 @@ class TestHeadlinesList extends React.Component {
                 <h3><span className="newspaperTitle">{item.paper}</span> </h3>
               </div>
               <div className="overlay">
-          <h3><span className="headlineTitle">{item.headline}</span></h3>
+                <h3><span className="headlineTitle">{item.headline}</span></h3>
               </div>
             </div>  
           ))}
         </ul>
         <div className="footer">
-        <p class="copyright">{this.state.copyright}<span><About /></span></p>
-      </div>
+          <p class="copyright">{this.state.copyright}<span><About /></span></p>
+        </div>
       </div>
       )
     }
   }
 }
-
 export default TestHeadlinesList
