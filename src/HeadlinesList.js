@@ -60,16 +60,14 @@ class HeadlinesList extends React.Component {
       return(
         <div className="loading">
           <div className="loadingMessage">
-          This app is hosted on a free plan, so the server will go to sleep from time to time. 
-          It takes about 10 seconds to load on initial fire-up. 
-          After that, the headlines automatically refresh. No need to do anything.
+            This app uses a free dyno, so it may take a while to load. Once loaded, it updates automatically
           </div>
           <Loader className="spinner"
             type="Bars"
             color="#ec1701"
             height={200}
             width={200}
-            timeout={20000}
+            timeout={25000}
           /> 
         </div>
       )      
