@@ -6,6 +6,7 @@ import Loader from 'react-loader-spinner'
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
+// dummy data to replaced hitting the actual API
 const data = [
   {"paper": "Daily mirror", "headline": "Boris tries to save Dominic Cummings' job by declaring 'it's not like he was visiting a lover' as maverick ally is accused of visiting parents' Durham home a SECOND time and breaking lockdown rules by 'strolling in bluebell wood' with his wife"},
   {"paper": "The Independent", "headline": "Boris tries to save Dominic Cummings' job by declaring 'it's not like he was visiting a lover' as maverick ally is accused of visiting parents' Durham home a SECOND time and breaking lockdown rules by 'strolling in bluebell wood' with his wife"},

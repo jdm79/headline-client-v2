@@ -3,6 +3,8 @@ import About from './About'
 import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
+// my local server API and the Heroku-hosted API
+// I switch these around when testing things
 const url = "https://flask-headlines-api.herokuapp.com/headlines"
 const urlDev = "http://127.0.0.1:5000/headlines"
 
@@ -20,6 +22,8 @@ class HeadlinesList extends React.Component {
     };
   }
 
+  // this all gets run on first loading
+  // sleep timer to run every 5 mins 
   componentDidMount() {
     this.getData()
     this.getDate()
@@ -56,6 +60,10 @@ class HeadlinesList extends React.Component {
     ) 
   } 
 
+  // this is where the HTML is created
+  // once the loading is complete, it will map over the items array and display
+  // I can't put comments inside the render function. crashes the app
+  // From the items array I have access to the paper and headline variables
   render() {
     const { error, isLoaded, items } = this.state
     if (error) {
