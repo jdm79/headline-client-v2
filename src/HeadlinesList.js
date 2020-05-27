@@ -90,6 +90,7 @@ class HeadlinesList extends React.Component {
       return (
         <div>
           <h6 className="updated">Updated at: {this.state.date}</h6>
+          <div className="divider"></div>
         <ul>
           {items.map(item => (
             <a href={item.link} target="_blank">

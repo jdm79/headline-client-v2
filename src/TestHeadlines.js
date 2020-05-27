@@ -83,6 +83,7 @@ class TestHeadlinesList extends React.Component {
       return (
         <div>
           <h6 className="updated">Updated at: {this.state.date}</h6>
+          <div className="divider"></div>
         <ul>
           {items.map(item => (
             <div className="container" key={item.paper}>
@@ -92,7 +93,11 @@ class TestHeadlinesList extends React.Component {
               <div className="overlay">
                 <h3><span className="headlineTitle">{item.headline}</span></h3>
               </div>
+              <div className="blackBottom">
+
+            </div>
             </div>  
+            
           ))}
         </ul>
         <div className="footer">

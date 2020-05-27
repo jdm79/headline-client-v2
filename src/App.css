@@ -1,7 +1,41 @@
 .App {
   text-align: center;
   color: white;
+  background-color: black;
+  border-color: black;
+  border-style: solid;
+  border-bottom-width: 20px;
+  max-height: 10px;
+}
+
+.blackTop {
+  height: 19px;
+}
+
+.divider {
+  background-color: #282c34;
+  height: 1px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 5vh;
+  max-height: 90px;
+  max-width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  font-family: Arial, Helvetica, sans-serif;
+  font: Helvetica;
+  font-weight: 900;
+  color: white;
   background-color:#ec1701;
+  margin-top: -25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 a, u {
@@ -166,6 +200,10 @@ ul {
   font: Helvetica;
   max-width: 300px;
   margin: 0 auto;
+  margin-top: 195px;
+  border: black;
+  border-width: 2px;
+  border-style: solid;
 }
 
 .errorMessage {
@@ -177,27 +215,12 @@ ul {
   font-weight: 900;
   text-align: center;
   padding: 5px;
-  margin-top: 5px;
-}
-
-.App-header {
-  /* background-color: #282c34; */
-  /* min-height: 5vh; */
-  max-height: 90px;
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  text-align: center;
-  /* padding-left: 20px; */
-  justify-content: center;
-  font-size: calc(15px + 2vmin);
-  font-style: italic;
-  font-family: Arial, Helvetica, sans-serif;
-  font: Helvetica;
-  font-weight: 900;
-  /* font-size: 40px; */
-  color: white;
-  background-color:#ec1701;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 195px;
+  border: black;
+  border-width: 2px;
+  border-style: solid;
 }
 
 .App-link {
@@ -209,25 +232,22 @@ ul {
 
 .updated {
   text-align: center;
+  margin-top: 126px;
 }
 
 
 @media screen and (max-width: 1024px) {
 
   .App-header {
-   
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     text-align: center;
-    padding-left: 40px;
+    padding: 20px;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    font-style: italic;
+    font-size: calc(8px + 2vmin);
     font-family: Arial, Helvetica, sans-serif;
     font: Helvetica;
     font-weight: 900;
-    /* font-size: 40px; */
     color: white;
     background-color:#ec1701;
   }
@@ -244,11 +264,15 @@ ul {
 
   ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 1em;
     margin: 0 auto;
     max-width: 64em;
     padding: 0;
+  }
+
+  .updated {
+    text-align: center;
   }
 }
 
@@ -271,6 +295,14 @@ ul {
     max-width: 64em;
     padding: 0;
   }
+
+  .App-header {
+    padding: 20px;
+  }
+
+  .updated {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -290,7 +322,6 @@ ul {
     font-family: Arial, Helvetica, sans-serif;
     font: Helvetica;
     line-height: 1.2;
-
   }
 
   .loading {
@@ -305,6 +336,7 @@ ul {
 
   .App-header {
     text-align: center;
+    padding: 30px;
   }
 
   ul {
@@ -314,6 +346,11 @@ ul {
     margin: 0 auto;
     max-width: 64em;
     padding: 0;
+  }
+
+  .updated {
+    text-align: center;
+    margin-top: 116px;
   }
 }
 
@@ -326,7 +363,20 @@ ul {
 
   .App-header {
     text-align: center;
-    padding-right: 60px;
+    padding: 20px;
+  }
+
+  .blackTop {
+    height: 19px;
+  }
+
+  .App {
+    height: 10px;
+  }
+
+  .updated {
+    text-align: center;
+    margin-top: 96px;
   }
 }
 
@@ -339,7 +389,12 @@ ul {
 
   .App-header {
     text-align: center;
-    padding-right: 65px;
+    padding: 20px;
+    padding-top: 35px;
+  }
+
+  .updated {
+    margin-top: 120px;
   }
 }
 
@@ -352,7 +407,9 @@ ul {
 
   .App-header {
     text-align: center;
-    padding-right: 60px;
+    padding: 10px;
+    padding-top:30px;
+    font-size: calc(6px + 2vmin);
   }
 }
 
@@ -365,7 +422,8 @@ ul {
 
   .App-header {
     text-align: center;
-    padding-right: 40px;
+    padding: 20px;
+    font-size: calc(6px + 2vmin);
   }
 
   .modal {
@@ -374,13 +432,16 @@ ul {
     font-family: Arial, Helvetica, sans-serif;
     font: Helvetica;
     line-height: 1.2;
-
   }
 
   .modal > .aboutContent {
     width: 100%;
     padding-top: 10px;
     /* font-size: 12px; */
+  }
+
+  .updated {
+    margin-top: 100px;
   }
 }
 
@@ -393,5 +454,11 @@ ul {
 
   .App-header {
     text-align: center;
+    font-size: 15px;
+    padding: 30px;
+  }
+
+  .updated {
+    margin-top: 120px;
   }
 }

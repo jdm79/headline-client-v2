@@ -7,6 +7,8 @@ function App() {
   return (
     <div>
       <div className="App">
+        <div className="blackTop">
+        </div>
         <header className="App-header">
           <h1>UK Headline Checker</h1>
         </header>
