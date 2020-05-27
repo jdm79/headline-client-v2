@@ -242,9 +242,9 @@ ul {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 20px;
     justify-content: center;
-    font-size: calc(8px + 2vmin);
+    font-size: calc(2px + 2vmin);
+    padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font: Helvetica;
     font-weight: 900;
@@ -273,6 +273,7 @@ ul {
 
   .updated {
     text-align: center;
+    margin-top: 90px;
   }
 }
 
@@ -297,11 +298,13 @@ ul {
   }
 
   .App-header {
-    padding: 20px;
+    font-size: calc(2px + 2vmin);
+    padding: 10px;
   }
 
   .updated {
     text-align: center;
+    margin-top: 90px;
   }
 }
 
@@ -336,8 +339,8 @@ ul {
 
   .App-header {
     text-align: center;
-    padding: 30px;
-  }
+    font-size: calc(2px + 2vmin);
+    padding: 10px;  }
 
   ul {
     display: grid;
@@ -350,7 +353,7 @@ ul {
 
   .updated {
     text-align: center;
-    margin-top: 116px;
+    margin-top: 100px;
   }
 }
 
@@ -363,8 +366,8 @@ ul {
 
   .App-header {
     text-align: center;
-    padding: 20px;
-  }
+    font-size: calc(2px + 2vmin);
+    padding: 10px;  }
 
   .blackTop {
     height: 19px;
@@ -376,7 +379,7 @@ ul {
 
   .updated {
     text-align: center;
-    margin-top: 96px;
+    margin-top: 80px;
   }
 }
 
@@ -389,12 +392,13 @@ ul {
 
   .App-header {
     text-align: center;
-    padding: 20px;
     padding-top: 35px;
+    font-size: calc(2px + 2vmin);
+    padding: 10px; 
   }
 
   .updated {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 }
 
@@ -407,9 +411,13 @@ ul {
 
   .App-header {
     text-align: center;
-    padding: 10px;
     padding-top:30px;
-    font-size: calc(6px + 2vmin);
+    font-size: calc(2px + 2vmin);
+    padding: 10px;  
+  }
+
+  .updated {
+    margin-top: 80px;
   }
 }
 
@@ -422,8 +430,8 @@ ul {
 
   .App-header {
     text-align: center;
-    padding: 20px;
-    font-size: calc(6px + 2vmin);
+    padding: 5px;
+    font-size: calc(2px + 2vmin);
   }
 
   .modal {
@@ -437,11 +445,10 @@ ul {
   .modal > .aboutContent {
     width: 100%;
     padding-top: 10px;
-    /* font-size: 12px; */
   }
 
   .updated {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 
@@ -454,11 +461,29 @@ ul {
 
   .App-header {
     text-align: center;
-    font-size: 15px;
-    padding: 30px;
+    font-size: calc(2px + 2vmin);
+    padding: 10px;
   }
 
   .updated {
-    margin-top: 120px;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  
+  .content {
+    margin-top: -10px;
+    padding-left: 0px;
+  }
+
+  .App-header {
+    text-align: center;
+    font-size: calc(2px + 2vmin);
+    padding: 10px;
+  }
+
+  .updated {
+    margin-top: 70px;
   }
 }
