@@ -36,6 +36,9 @@
   margin-top: -25px;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
 }
 
 a, u {
@@ -226,15 +229,22 @@ ul {
 .App-link {
   color: #61dafb;
 }
-/* 
-  Media queries below, to handle different-sized screens
-*/
 
 .updated {
   text-align: center;
-  margin-top: 126px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  padding: 5px;
+  max-width: 80px;
+  margin: 0 auto;
+  margin-top: 107px;
+  margin-bottom: 10px;
 }
 
+/* 
+  Media queries below, to handle different-sized screens
+*/
 
 @media screen and (max-width: 1024px) {
 
@@ -353,7 +363,7 @@ ul {
 
   .updated {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 87px;
   }
 }
 
@@ -379,7 +389,7 @@ ul {
 
   .updated {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 70px;
   }
 }
 
@@ -398,7 +408,7 @@ ul {
   }
 
   .updated {
-    margin-top: 80px;
+    margin-top: 70px;
   }
 }
 
@@ -417,7 +427,7 @@ ul {
   }
 
   .updated {
-    margin-top: 80px;
+    margin-top: 68px;
   }
 }
 
@@ -448,7 +458,7 @@ ul {
   }
 
   .updated {
-    margin-top: 70px;
+    margin-top: 55px;
   }
 }
 
@@ -466,7 +476,7 @@ ul {
   }
 
   .updated {
-    margin-top: 80px;
+    margin-top: 65px;
   }
 }
 
@@ -484,6 +494,6 @@ ul {
   }
 
   .updated {
-    margin-top: 70px;
+    margin-top: 60px;
   }
 }
