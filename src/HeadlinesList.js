@@ -26,7 +26,6 @@ class HeadlinesList extends React.Component {
   // sleep timer to run every 5 mins 
   componentDidMount() {
     this.getData()
-    this.getDate()
     this.intervalID = setInterval(this.getData.bind(this), 300000)
   }
 
@@ -34,21 +33,24 @@ class HeadlinesList extends React.Component {
     clearInterval(this.intervalID);
   }
 
-  getDate() {
-    this.setState({
-      date: new Date().toLocaleTimeString() 
-    })
-  }
+  // this is a vain attempt to revive the app if it times out
+  // zombie() {
+  //   if (this.error != null) {
+  //     this.getData()
+  //   } else {
+  //     return
+  //   }
+  // }
   
   getData = () => {
-    this.getDate()
-    fetch(url)
+    fetch(urlDev)
     .then(res => res.json())
     .then(
       (data) => {
         this.setState({
           isLoaded: true,
           items: data.data,
+          date: new Date().toLocaleTimeString() 
         })
       },
       (error) => {
@@ -107,7 +109,10 @@ class HeadlinesList extends React.Component {
           ))}
         </ul>
         <div className="footer">
-          <p className="copyright"><a href="https://jamesmalvern.com" target="_blank" rel="noopener noreferrer">{this.state.copyright}</a><span><About /></span></p>
+          <p className="copyright">
+            <span><About /></span>
+            <a href="https://jamesmalvern.com" target="_blank" rel="noopener noreferrer">{this.state.copyright}</a>
+          </p>
         </div>
       </div>
       )

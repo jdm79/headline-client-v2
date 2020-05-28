@@ -45,16 +45,13 @@ class TestHeadlinesList extends React.Component {
     this.setState({
       isLoaded: true,
       items: data,
+      date: new Date().toLocaleTimeString() 
     })
     this.getDate()
   }
 
   componentWillUnmount() {
     clearInterval(this.intervalID);
-  }
-
-  getDate() {
-    var date = { currentTime: new Date().toLocaleTimeString() };
   }
         
   render() {
