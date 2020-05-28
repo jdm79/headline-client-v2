@@ -93,7 +93,7 @@ class HeadlinesList extends React.Component {
           <div className="divider"></div>
         <ul>
           {items.map(item => (
-            <a href={item.link} target="_blank">
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
               <div className="container" key={item.paper}>
                 <div className="content" >
                   <h3><span className="newspaperTitle">{item.paper}</span> </h3>
@@ -107,7 +107,7 @@ class HeadlinesList extends React.Component {
           ))}
         </ul>
         <div className="footer">
-          <p className="copyright"><a href="https://jamesmalvern.com" target="_blank">{this.state.copyright}</a><span><About /></span></p>
+          <p className="copyright"><a href="https://jamesmalvern.com" target="_blank" rel="noopener noreferrer">{this.state.copyright}</a><span><About /></span></p>
         </div>
       </div>
       )
