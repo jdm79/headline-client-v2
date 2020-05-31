@@ -3,6 +3,7 @@ import About from './About'
 import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
+
 // my local server API and the Heroku-hosted API
 // I switch these around when testing things
 const url = "https://flask-headlines-api.herokuapp.com/headlines"
@@ -112,6 +113,11 @@ class HeadlinesList extends React.Component {
           <p className="copyright">
             <span><About /></span>
             <a href="https://jamesmalvern.com" target="_blank" rel="noopener noreferrer">{this.state.copyright}</a>
+            <div>
+              <a href="https://twitter.com/UkHeadline">
+                <img src="https://img.icons8.com/android/48/000000/twitter.png"/>
+              </a>
+            </div>
           </p>
         </div>
       </div>
