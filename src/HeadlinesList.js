@@ -44,13 +44,13 @@ class HeadlinesList extends React.Component {
   // }
   
   getData = () => {
-    fetch(url)
+    fetch(urlDev)
     .then(res => res.json())
     .then(
       (data) => {
         this.setState({
           isLoaded: true,
-          items: data.data,
+          items: data,
           date: new Date().toLocaleTimeString() 
         })
       },
