@@ -50,7 +50,7 @@ class HeadlinesList extends React.Component {
       (data) => {
         this.setState({
           isLoaded: true,
-          items: data,
+          items: data.data,
           date: new Date().toLocaleTimeString() 
         })
       },
