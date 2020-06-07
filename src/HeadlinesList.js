@@ -85,7 +85,7 @@ class HeadlinesList extends React.Component {
             color="#ec1701"
             height={200}
             width={200}
-            timeout={25000}
+            timeout={30000}
           /> 
         </div>
       )      
