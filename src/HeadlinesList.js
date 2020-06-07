@@ -44,7 +44,7 @@ class HeadlinesList extends React.Component {
   // }
   
   getData = () => {
-    fetch(urlDev)
+    fetch(url)
     .then(res => res.json())
     .then(
       (data) => {
