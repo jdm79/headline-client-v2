@@ -9,7 +9,7 @@ export default About => (
         <div className="aboutHeader"> About UK Headline Checker </div>
         <div className="aboutContent">
           {" "}
-          This app updates automatically every five minutes. It's designed to be viewed on a large screen in a newsroom,
+          This app is live and updates automatically every five minutes. It's designed to be viewed on a large screen in a newsroom,
           in order to monitor the national discourse (as directed by the newspapers).
           <br />
            <br />
@@ -17,10 +17,7 @@ export default About => (
           The newspapers are ordered roughly by political alignment. Having the papers positioned like this
           makes it easier to view
           how major stories are spun by different organisations.
-           <br />
-           <br />
-          The Daily Mirror, Daily Star and Daily Post are all owned by Reach PLC, who have a great dev team 
-          - my scraper sometimes doesn't get past their defences.
+         
         </div>
         <div className="actions">
           

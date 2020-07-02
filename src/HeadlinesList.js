@@ -33,15 +33,6 @@ class HeadlinesList extends React.Component {
   componentWillUnmount() {
     clearInterval(this.intervalID);
   }
-
-  // this is a vain attempt to revive the app if it times out
-  // zombie() {
-  //   if (this.error != null) {
-  //     this.getData()
-  //   } else {
-  //     return
-  //   }
-  // }
   
   getData = () => {
     fetch(url)
