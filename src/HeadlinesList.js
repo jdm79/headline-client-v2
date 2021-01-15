@@ -35,7 +35,7 @@ class HeadlinesList extends React.Component {
   }
   
   getData = () => {
-    fetch(url)
+    fetch(urlDev)
     .then(res => res.json())
     .then(
       (data) => {
@@ -69,7 +69,11 @@ class HeadlinesList extends React.Component {
       return(
         <div className="loading">
           <div className="loadingMessage">
-            This app uses a free dyno, so it may take a while to load. Once loaded, it updates automatically
+            This app uses a free dyno and free hosting (I have spent no money on this project at all), so it may take a while to load. 
+            If it doesn't work, refresh until it does! Once loaded, it updates automatically until it doesn't. 
+            Refresh again.
+
+            It's designed to be used in-house, so it's totally not ready for being available online, yet here it is.
           </div>
           <Loader className="spinner"
             type="Bars"
