@@ -47,7 +47,6 @@ class TestHeadlinesList extends React.Component {
       items: data,
       date: new Date().toLocaleTimeString() 
     })
-    this.getDate()
   }
 
   componentWillUnmount() {

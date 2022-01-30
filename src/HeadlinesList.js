@@ -6,8 +6,9 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 // my local server API and the Heroku-hosted API
 // I switch these around when testing things
-const url = "https://flask-headlines-api.herokuapp.com/headlines"
-const urlDev = "http://127.0.0.1:5000/headlines"
+//const url = "https://flask-headlines-api.herokuapp.com/headlines"
+const url = "https://uk-headline-checker-api-2021.herokuapp.com/headlines"
+const urlDev = "http://127.0.0.1:5000/test-headlines"
 
 class HeadlinesList extends React.Component {
   intervalID
