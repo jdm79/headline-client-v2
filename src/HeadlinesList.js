@@ -63,8 +63,7 @@ class HeadlinesList extends React.Component {
     const { error, isLoaded, items } = this.state
     if (error) {
       return <div className="errorMessage"> 
-          I am hosted on a free dyno, so I will go to sleep after a while.
-          Refresh the browser to bring me back.
+          I am not working at the moment! Hopefully I will be fixed at some point :/
         </div>
     } else if (!isLoaded) {
       return(
